@@ -12,6 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Post> list = [];
   @override
   void initState() {
+    super.initState();
     list = [
       Post(
           title: "Post 1",

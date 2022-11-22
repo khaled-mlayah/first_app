@@ -1,8 +1,9 @@
 
-import 'package:first_app/views/home_screen.dart';
 import 'package:first_app/widgets/custom_button.dart';
 import 'package:first_app/widgets/custom_text_filed.dart';
 import 'package:flutter/material.dart';
+
+import 'bottom_app_bar.dart';
 
 class LoginScreen extends StatefulWidget {
   // ignore: use_key_in_widget_constructors
@@ -95,7 +96,7 @@ String _password="";
           title: "connexion",
           onPressed:() {
            Navigator.of(context).push(
-            MaterialPageRoute(builder: (BuildContext context )=> const HomeScreen())
+            MaterialPageRoute(builder: (BuildContext context )=> const BottomAppBarNavigation())
            );
           },
           
