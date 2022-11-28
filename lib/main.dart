@@ -1,5 +1,7 @@
+import 'package:first_app/providers/list_providers.dart';
 import 'package:first_app/views/login_screen.dart';
 import 'package:flutter/material.dart' ;
+import 'package:provider/provider.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -7,12 +9,23 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // 
+  //
+  //This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+   Widget build(BuildContext context) {
+    return
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => ListProvider()),
+      ],
+      child: MaterialApp(
+    
+  
+
+  
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Flutter Demo EPI',
       theme: ThemeData(
         textTheme: const TextTheme(
           titleLarge: TextStyle(
@@ -39,7 +52,7 @@ class MyApp extends StatelessWidget {
      ),
       themeMode: ThemeMode.system,
       home: const LoginScreen(),
-    );
+    ));
   }
 }
 
